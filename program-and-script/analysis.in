@@ -1,0 +1,15 @@
+parm comp.pdb
+trajin nowat.nc
+reference comp.pdb
+rms reference :1-77@C1'
+#rms reference out rmsd.dat :1-166&!@H=
+#rms reference out ploop-rmsd.dat :8-18&!@H=
+#rms reference out s1-rmsd.dat :27-40&!@H=
+#rms reference out s2-rmsd.dat :58-75&!@H=
+rms first mass nofit out rmsd-lig.dat :82&!@H=
+atomicfluct out rmsf.dat :1-77@C1' byres
+matrix correl :1-77@C1' name m1 out m1.dat byatom
+matrix covar :1-77@C1' name lig out lig.dat
+analyze matrix lig out evecs.dat vecs 40
+
+

@@ -1,0 +1,43 @@
+#!/bin/bash
+parm comp.pdb
+trajin ../md1/md1.nc 1 25000 10
+trajin ../md2/md2.nc 1 25000 10
+trajin ../md3/md3.nc 1 25000 10
+trajin ../md4/md4.nc 1 25000 10
+trajin ../md5/md5.nc 1 25000 10
+trajin ../md6/md6.nc 1 25000 10
+trajin ../md7/md7.nc 1 25000 10
+trajin ../md8/md8.nc 1 25000 10
+trajin ../md9/md9.nc 1 25000 10
+trajin ../md10/md10.nc 1 25000 10
+trajin ../md11/md11.nc 1 25000 10
+trajin ../md12/md12.nc 1 25000 10
+trajin ../md13/md13.nc 1 25000 10
+trajin ../md14/md14.nc 1 25000 10
+trajin ../md15/md15.nc 1 25000 10
+trajin ../md16/md16.nc 1 25000 10
+trajin ../md17/md17.nc 1 25000 10
+trajin ../md18/md18.nc 1 25000 10
+trajin ../md19/md19.nc 1 25000 10
+trajin ../md20/md20.nc 1 25000 10
+trajin ../md21/md21.nc 1 25000 10
+trajin ../md22/md22.nc 1 25000 10
+trajin ../md23/md23.nc 1 25000 10
+trajin ../md24/md24.nc 1 25000 10
+trajin ../md25/md25.nc 1 25000 10
+trajin ../md26/md26.nc 1 25000 10
+trajin ../md27/md27.nc 1 25000 10
+trajin ../md28/md28.nc 1 25000 10
+trajin ../md29/md29.nc 1 25000 10
+trajin ../md30/md30.nc 1 25000 10
+trajin ../md31/md31.nc 1 25000 10
+trajin ../md32/md32.nc 1 25000 10
+trajin ../md33/md33.nc 1 25000 10
+trajin ../md34/md34.nc 1 25000 10
+trajin ../md35/md35.nc 1 25000 10
+trajin ../md36/md36.nc 1 25000 10
+trajin ../md37/md37.nc 1 25000 10
+trajin ../md38/md38.nc 1 25000 10
+trajin ../md39/md39.nc 1 25000 10
+trajin ../md40/md40.nc 1 25000 10
+trajout md.xtc

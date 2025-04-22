@@ -1,0 +1,87 @@
+parm comp.pdb
+trajin nowat.nc
+#radgyr out gry.dat :1-77&!@H=
+#distance 167-168 :167@NZ :173@C2,N7 out 118-173.dat
+#distance 27-173  :27@CG,CZ :173@C2,C5 out 27-173.dat
+#distance 16-1702  :16@NZ :170@PG out 16-1702.dat
+#distance 15-1731  :15@NZ :173@PB out 15-1731.dat
+#distance 15-1732  :15@NZ :173@PG out 15-1732.dat
+#distance 118-173 :118@OD1,OD2 :173@C2 out 118-173.dat
+#distance 37-54 :37@C4,N1 :54@C6,N3 out 37-54.dat
+#distance 48-54 :48@C4,N1 :54@C6,N3 out 48-54.dat
+#distance 29-54 :29@C2,N7 :54@C2,N7 out 29-54.dat
+#distance 36-54 :36@C2,N7 :54@SD out 36-54.dat
+#dihedral phi1 :30@C :31@N :31@CA :31@C out phi1.dat
+#dihedral psi1 :31@N :31@CA :31@C :32@N out psi1.dat
+#hist phi1 psi1 min -180 max 180 bins 72 out y32.gnu free 300
+
+#dihedral phi2 :10@C :11@N :11@CA :11@C out phi2.dat
+#dihedral psi2 :11@N :11@CA :11@C :12@N out psi2.dat
+#hist phi2 psi2 min -180 max 180 bins 72 out g12.gnu free 300
+
+#dihedral phi3 :60@C :61@N :61@CA :61@C out phi3.dat
+#dihedral psi3 :61@N :61@CA :61@C :62@N out psi2.dat
+#hist phi3 psi3 min -180 max 180 bins 72 out q61.gnu free 300
+
+
+#dihedral phi :118@C :119@N :119@CA :119@C
+#dihedral psi :119@N :119@CA :119@C :120@N
+#hist phi psi min -180 max 180 bins 72 out c118.gnu free 300
+
+pucker pucker28 :28@C1' :28@C2' :28@C3' :28@C4' :28@O4' out pucker28.agr range360
+pucker pucker29 :29@C1' :29@C2' :29@C3' :29@C4' :29@O4' out pucker29.agr range360
+pucker pucker30 :30@C1' :30@C2' :30@C3' :30@C4' :30@O4' out pucker30.agr range360
+pucker pucker31 :31@C1' :31@C2' :31@C3' :31@C4' :31@O4' out pucker31.agr range360
+pucker pucker64 :64@C1' :64@C2' :64@C3' :64@C4' :64@O4' out pucker64.agr range360
+pucker pucker65 :65@C1' :65@C2' :65@C3' :65@C4' :65@O4' out pucker65.agr range360
+pucker pucker66 :66@C1' :66@C2' :66@C3' :66@C4' :66@O4' out pucker66.agr range360
+pucker pucker60 :60@C1' :60@C2' :60@C3' :60@C4' :60@O4' out pucker60.agr range360
+pucker pucker48 :48@C1' :66@C2' :48@C3' :48@C4' :48@O4' out pucker48.agr range360
+pucker pucker6 :6@C1' :6@C2' :6@C3' :6@C4' :6@O4' out pucker6.agr range360
+pucker pucker5 :5@C1' :5@C2' :5@C3' :5@C4' :5@O4' out pucker5.agr range360
+pucker pucker20 :20@C1' :20@C2' :20@C3' :20@C4' :20@O4' out pucker20.agr range360
+pucker pucker19 :19@C1' :19@C2' :19@C3' :19@C4' :19@O4' out pucker19.agr range360
+pucker pucker21 :21@C1' :21@C2' :21@C3' :21@C4' :21@O4' out pucker21.agr range360
+
+
+#surf :1-77 out surf.dat
+distance 82-30 :82@C2A,C5A :30@C2,C5 out 82-30.dat
+distance 82-31 :82@C2A,C5A :31@C2,C5 out 82-31.dat
+distance 82-66 :82@O1B,O2B,O3B :66@C2 out 82-66.dat
+distance 80-82 :80@MG :82@O2B out 80-82.dat
+distance 80-66 :80@MG :66@O6 out 80-66.dat
+distance 80-48 :80@MG :48@O6 out 80-48.dat
+distance 78-o1a :78@MG :82@O1A out 78-o1a.dat
+distance 78-o1b :78@MG :82@O1B out 78-o1b.dat
+distance 78-o3b :78@MG :82@O3B out 78-o3b.dat
+#distance a3-a4 :88-104@CA :129-138@CA out a3-a4.dat
+#dihedral 31chi1 :31@N :31@C :31@CB :31@CG out 32chi1.dat
+#dihedral 205chi1 :205@N :205@CA :205@CB :205@CG out 205chi1.dat
+#distance 36-61 :36@CA :61@CA out 36-61.dat
+#distance 172-1731 :172@MG :173@O2G out 172-1731.dat
+#distance 172-1732 :172@MG :173@O2B out 172-1732.dat
+#distance 169-1703 :169@MG :170@O3B out 167-1683.dat
+#distance 172-17 :172@MG :17@OG out 172-17.dat
+#distance 172-35 :172@MG :35@O out 172-35.dat
+#distance 172-57 :172@MG :57@OD1,OD2 out 172-57.dat
+#secstruct :1-169 out dssp.gnu
+radial rdf1.dat 0.5 15 :78@MG :82@O1A
+radial rdf2.dat 0.5 15 :78@MG :82@O3B
+radial rdf2.dat 0.5 15 :78@MG :82@O1B
+#radial rdf3.dat 0.5 15 :167@MG :168@O3B
+hbond  hb1 out hb1.dat donormask :1-77 acceptormask :82 dist 3.5 angle 120 \
+   avgout hb1-avghb.dat
+hbond  hb2 out hb2.dat donormask :82 acceptormask :1-77 dist 3.5 angle 120 \
+   avgout hb2-avghb.dat
+reference comp.pdb
+rms reference :1-77&!@H=
+rms reference out rmsd.dat :1-77&!@H=
+#rms reference out rms-loop.dat :8-19&!@H=
+#rms reference out rms-s1.dat :29-39&!@H=
+#rms reference out rms-s2.dat :60-70&!@H=
+#rms first mass nofit out rmsd-lig.dat :168&!@H=
+#atomicfluct out rmsf.dat :1-166@CA byres
+#matrix correl :1-166@CA name m1 out m1.dat byatom
+#matrix covar :1-166@CA name lig out lig.dat
+#analyze matrix lig out evecs.dat vecs 40
+
